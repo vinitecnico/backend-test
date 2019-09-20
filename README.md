@@ -1,7 +1,10 @@
 # backend-test run
 
-dotnet build
+- dotnet build
 
-dotnet run
+- dotnet run --project ./backend-test.api/backend-test.api.csproj
 
-http://localhost:7001/swagger/index.html
+https://localhost:5001/swagger/index.html
+
+# dotnet run test project
+dotnet test

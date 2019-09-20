@@ -2,21 +2,22 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend_test.Repository;
 using Microsoft.AspNetCore.Mvc;
 // using testJokenpo.Entities;
 // using testJokenpo.Repository;
 
-namespace testJokenpo.Controllers
+namespace backend_test.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class MovementController : ControllerBase
     {
-        // private readonly IRepository _gameRepository;
+        private readonly IRepository _movementRepository;
 
-        public MovementController()
+        public MovementController(IRepository movementRepository)
         {
-            //_gameRepository = gameRepository;
+            _movementRepository = movementRepository;
         }
 
         // GET api/game/{player1}/{player2}
