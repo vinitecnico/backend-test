@@ -10,11 +10,12 @@ namespace Web.Api.Repository
         Task<bool> UploadFileDbLog(IFormFile file);
         List<Task> Insert(List<MovementResult> movments, string type);
         Task<Extract> GetExtractAll();
+        Task<List<Movement>> GetMovementAll();
         Task<List<Movement>> GetAllMovements();
-        Dictionary<string, decimal> TotalByCategory();
-        Dictionary<string, decimal> CustomerCategorySpentMore();
-        Dictionary<string, decimal> MonthCustomerCategorySpentMore();
-        Dictionary<string, decimal> MoneyCustomerSpent();
-        Dictionary<string, decimal> MoneyCustomerReceived();
+        Task<Dictionary<string, double>> TotalByCategory();
+        Task<KeyValuePair<string, double>> CustomerCategorySpentMore();
+        Task<KeyValuePair<string, double>> MonthCustomerCategorySpentMore();
+        Dictionary<string, double> MoneyCustomerSpent();
+        Dictionary<string, double> MoneyCustomerReceived();
     }
 }

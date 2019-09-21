@@ -32,5 +32,26 @@ namespace Web.Api.Controllers
             var result = await _extractRepository.GetAllMovements();
             return result;
         }
+
+        [HttpGet("TotalByCategory")]
+        public async Task<Dictionary<string, double>> TotalByCategory()
+        {
+            var result = await _extractRepository.TotalByCategory();
+            return result;
+        }
+
+        [HttpGet("CustomerCategorySpentMore")]
+        public async Task<KeyValuePair<string, double>> CustomerCategorySpentMore()
+        {
+            var result = await _extractRepository.CustomerCategorySpentMore();
+            return result;
+        }
+
+        [HttpGet("MonthCustomerCategorySpentMore")]
+        public async Task<KeyValuePair<string, double>> MonthCustomerCategorySpentMore()
+        {
+            var result = await _extractRepository.MonthCustomerCategorySpentMore();
+            return result;
+        }
     }
 }

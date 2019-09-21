@@ -77,29 +77,91 @@ namespace Web.Api.Repository
             return list;
         }
 
-        public Dictionary<string, decimal> CustomerCategorySpentMore()
+        public async Task<List<Movement>> GetMovementAll(string type)
+        {
+            string baseURL = _configuration.GetSection("BackendTest:BaseURL").Value;
+            var result = await _client.GetAsync($"{baseURL}/{type}");
+            var list = new List<Movement>();
+
+            if (result.IsSuccessStatusCode)
+            {
+                var movements = await result.Content.ReadAsAsync<IEnumerable<MovementResult>>();
+                var util = new UtilHelp();
+                list = util.ConvertMovementResultToMovement(movements.ToList());
+            }
+
+            return list;
+        }
+
+        // informar o total de gastos por categoria;
+        public async Task<Dictionary<string, double>> TotalByCategory()
+        {
+            var list = await GetMovementAll("pagamentos");
+
+            var items = list.GroupBy(x => x.categoria)
+            .Select(x => new
+            {
+                Key = !string.IsNullOrEmpty(x.Key) ? x.Key : "sem categoria",
+                value = Math.Round(x.Sum(y => y.valor), 2, MidpointRounding.AwayFromZero)
+            })
+            .OrderBy(x => x.value)
+            .ToDictionary(x => x.Key, x => x.value);
+            return items;
+        }
+
+        // informar qual categoria cliente gastou mais;
+        public async Task<KeyValuePair<string, double>> CustomerCategorySpentMore()
+        {
+            var list = await GetMovementAll("pagamentos");
+            var items = list.GroupBy(x => x.categoria)
+            .Select(x => new
+            {
+                Key = !string.IsNullOrEmpty(x.Key) ? x.Key : "sem categoria",
+                value = Math.Round(x.Sum(y => y.valor), 2, MidpointRounding.AwayFromZero)
+            })
+            .OrderBy(x => x.value)
+            .ToDictionary(x => x.Key, x => x.value);
+
+            var result = items.FirstOrDefault();
+            return result;
+        }
+
+        // informar qual foi o mês que cliente mais gastou;
+        public async Task<KeyValuePair<string, double>> MonthCustomerCategorySpentMore()
+        {
+            var list = await GetMovementAll("pagamentos");
+            var items = list
+            .Select(x => new
+            {
+                Month = x.data.Month,
+                value = x.valor
+            })
+            .GroupBy(x => x.Month)
+            .Select(x => new
+            {
+                Key = Convert.ToDateTime($"{DateTime.Now.Year}-{x.Key}-1").ToString("MMMM"),
+                value = Math.Round(x.Sum(y => y.value), 2, MidpointRounding.AwayFromZero)
+            })
+            .OrderBy(x => x.value)
+            .ToDictionary(x => x.Key, x => x.value);
+
+            var result = items.FirstOrDefault();
+            return result;
+        }
+
+        public Dictionary<string, double> MoneyCustomerReceived()
         {
             throw new System.NotImplementedException();
         }
 
-        public Dictionary<string, decimal> MoneyCustomerReceived()
+        public Dictionary<string, double> MoneyCustomerSpent()
         {
             throw new System.NotImplementedException();
         }
 
-        public Dictionary<string, decimal> MoneyCustomerSpent()
+        public Task<List<Movement>> GetMovementAll()
         {
-            throw new System.NotImplementedException();
-        }
-
-        public Dictionary<string, decimal> MonthCustomerCategorySpentMore()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Dictionary<string, decimal> TotalByCategory()
-        {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }
