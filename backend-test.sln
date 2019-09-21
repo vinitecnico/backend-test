@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Api", "Web.Api\Web.Api.csproj", "{D6256086-2482-4C40-8BCA-EB1557EB7AFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "backend-test.test", "backend-test.test\backend-test.test.csproj", "{EA3AC332-3EBF-48B4-9180-272FAFFFBCF5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Api.UnitTest", "Web.Api.UnitTest\Web.Api.UnitTest.csproj", "{3DBBA91D-6E11-4281-9B6A-91BB443496AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,5 +44,17 @@ Global
 		{EA3AC332-3EBF-48B4-9180-272FAFFFBCF5}.Release|x64.Build.0 = Release|Any CPU
 		{EA3AC332-3EBF-48B4-9180-272FAFFFBCF5}.Release|x86.ActiveCfg = Release|Any CPU
 		{EA3AC332-3EBF-48B4-9180-272FAFFFBCF5}.Release|x86.Build.0 = Release|Any CPU
+		{3DBBA91D-6E11-4281-9B6A-91BB443496AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DBBA91D-6E11-4281-9B6A-91BB443496AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DBBA91D-6E11-4281-9B6A-91BB443496AB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3DBBA91D-6E11-4281-9B6A-91BB443496AB}.Debug|x64.Build.0 = Debug|Any CPU
+		{3DBBA91D-6E11-4281-9B6A-91BB443496AB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3DBBA91D-6E11-4281-9B6A-91BB443496AB}.Debug|x86.Build.0 = Debug|Any CPU
+		{3DBBA91D-6E11-4281-9B6A-91BB443496AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DBBA91D-6E11-4281-9B6A-91BB443496AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DBBA91D-6E11-4281-9B6A-91BB443496AB}.Release|x64.ActiveCfg = Release|Any CPU
+		{3DBBA91D-6E11-4281-9B6A-91BB443496AB}.Release|x64.Build.0 = Release|Any CPU
+		{3DBBA91D-6E11-4281-9B6A-91BB443496AB}.Release|x86.ActiveCfg = Release|Any CPU
+		{3DBBA91D-6E11-4281-9B6A-91BB443496AB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
