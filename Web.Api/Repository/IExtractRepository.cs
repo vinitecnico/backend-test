@@ -8,6 +8,7 @@ namespace Web.Api.Repository
     public interface IExtractRepository
     {
         Task<bool> UploadFileDbLog(IFormFile file);
+        List<Task> Insert(List<Movement> movments, string type);
         Task<List<Extract>> GetAllMovements();
         Dictionary<string, decimal> TotalByCategory();
         Dictionary<string, decimal> CustomerCategorySpentMore();

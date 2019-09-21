@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Web.Api.Entities;
+using System.Linq;
 
 namespace Web.Api.Repository
 {
@@ -23,15 +24,34 @@ namespace Web.Api.Repository
             _loadingFileRepository = loadingFileRepository;
         }
 
+        // fazer o input dos dados acima, usando um arquivo no formato de log;
+        // chamar os recursos de API e combinar os dados para processamento.
         public async Task<bool> UploadFileDbLog(IFormFile file)
         {
             string baseURL = _configuration.GetSection("BackendTest:BaseURL").Value;
             var extract = _loadingFileRepository.Handle(file);
-            HttpContent content = new StringContent(JsonConvert.SerializeObject(extract), Encoding.UTF8, "application/json");
-            var result = await _client.PostAsync($"{baseURL}/db", content);
+            var resultPagamento = Insert(extract.pagamentos, "pagamentos");
+            var resultRecebimento = Insert(extract.pagamentos, "recebimentos");
+            var unionList = resultPagamento.Union(resultRecebimento);
+            await Task.WhenAll(resultPagamento);
             return true;
         }
 
+        public List<Task> Insert(List<Movement> movments, string type)
+        {
+            var tasks = new List<Task>();
+            foreach (var item in movments)
+            {
+                string baseURL = _configuration.GetSection("BackendTest:BaseURL").Value;
+                HttpContent content = new StringContent(JsonConvert.SerializeObject(item), Encoding.UTF8, "application/json");
+                var result = _client.PostAsync($"{baseURL}/{type}", content);
+                tasks.Add(result);
+            }
+
+            return tasks;
+        }
+
+        // exibir o log de movimentações de forma ordenada
         public async Task<List<Extract>> GetAllMovements()
         {
             var list = new List<Extract>();
@@ -40,7 +60,7 @@ namespace Web.Api.Repository
 
             if (result.IsSuccessStatusCode)
             {
-               var response = await result.Content.ReadAsAsync<Extract>();
+                var response = await result.Content.ReadAsAsync<Extract>();
             }
 
             return list;
@@ -70,5 +90,7 @@ namespace Web.Api.Repository
         {
             throw new System.NotImplementedException();
         }
+
+
     }
 }
