@@ -53,7 +53,7 @@ namespace Web.Api.api
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "testJokenpo");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "backend-test");
             });
 
             app.UseMvc();

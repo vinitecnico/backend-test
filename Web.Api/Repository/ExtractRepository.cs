@@ -149,19 +149,32 @@ namespace Web.Api.Repository
             return result;
         }
 
-        public Dictionary<string, double> MoneyCustomerReceived()
+        // quanto de dinheiro o cliente gastou;
+        public async Task<double> MoneyCustomerSpent()
         {
-            throw new System.NotImplementedException();
+            var list = await GetMovementAll("pagamentos");
+            var result = list.Sum(x => Math.Round(x.valor, 2, MidpointRounding.AwayFromZero));
+            return result;
         }
 
-        public Dictionary<string, double> MoneyCustomerSpent()
+        // quanto de dinheiro o cliente recebeu;
+        public async Task<double> MoneyCustomerReceived()
         {
-            throw new System.NotImplementedException();
+            var list = await GetMovementAll("recebimentos");
+            var result = list.Sum(x => Math.Round(x.valor, 2, MidpointRounding.AwayFromZero));
+            return result;
         }
 
-        public Task<List<Movement>> GetMovementAll()
+        // saldo total de movimentações do cliente.
+        public async Task<double> TotalMovementCustomer()
         {
-            throw new NotImplementedException();
+            var listRecebimentos = await GetMovementAll("recebimentos");
+            var totalRecebimentos = listRecebimentos.Sum(x => Math.Round(x.valor, 2, MidpointRounding.AwayFromZero));
+
+            var listPagamentos = await GetMovementAll("pagamentos");
+            var totalPagamentos = listPagamentos.Sum(x => Math.Round(x.valor, 2, MidpointRounding.AwayFromZero));
+            var result = totalPagamentos + totalRecebimentos;
+            return result;
         }
     }
 }

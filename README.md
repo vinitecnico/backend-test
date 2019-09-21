@@ -16,11 +16,20 @@ GET: https://localhost:5001/api/Extract/GetAllMovements
 - Informar o total de gastos por categoria;
 GET: https://localhost:5001/api/Extract/TotalByCategory
 
-- informar qual categoria cliente gastou mais;
+- Informar qual categoria cliente gastou mais;
 GET: https://localhost:5001/api/Extract/CustomerCategorySpentMore
 
-- informar qual foi o mês que cliente mais gastou;
+- Informar qual foi o mês que cliente mais gastou;
 GET: https://localhost:5001/api/Extract/MonthCustomerCategorySpentMore
+
+- Quanto de dinheiro o cliente gastou;
+GET: https://localhost:5001/api/Extract/MoneyCustomerSpent
+
+- Quanto de dinheiro o cliente recebeu;
+GET: https://localhost:5001/api/Extract/MoneyCustomerReceived
+
+- Saldo total de movimentações do cliente.
+GET: https://localhost:5001/api/Extract/TotalMovementCustomer
 
 # dotnet run test project
 dotnet test

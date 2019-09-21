@@ -53,5 +53,26 @@ namespace Web.Api.Controllers
             var result = await _extractRepository.MonthCustomerCategorySpentMore();
             return result;
         }
+
+        [HttpGet("MoneyCustomerSpent")]
+        public async Task<double> MoneyCustomerSpent()
+        {
+            var result = await _extractRepository.MoneyCustomerSpent();
+            return result;
+        }
+
+        [HttpGet("MoneyCustomerReceived")]
+        public async Task<double> MoneyCustomerReceived()
+        {
+            var result = await _extractRepository.MoneyCustomerReceived();
+            return result;
+        }
+
+        [HttpGet("TotalMovementCustomer")]
+        public async Task<double> TotalMovementCustomer()
+        {
+            var result = await _extractRepository.TotalMovementCustomer();
+            return result;
+        }
     }
 }
