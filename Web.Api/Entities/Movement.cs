@@ -4,10 +4,10 @@ namespace Web.Api.Entities
 {
     public class Movement 
     {
-        public string Data { get; set; }
-        public string Descricao { get; set; }
-        public string Moeda { get; set; }
-        public decimal Valor { get; set; }
+        public string data { get; set; }
+        public string descricao { get; set; }
+        public string moeda { get; set; }
+        public string valor { get; set; }
         public string categoria { get; set; }
     }
 }

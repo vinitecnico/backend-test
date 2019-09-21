@@ -20,10 +20,17 @@ namespace Web.Api.Controllers
             _extractRepository = extractRepository;
         }
 
-        [HttpPost]
-        public bool UploadFileDbLog(IFormFile file)
+        [HttpPost("UploadFileDbLog")]
+        public async Task<bool> UploadFileDbLog(IFormFile file)
         {
-            return _extractRepository.UploadFileDbLog(file);
+            return await _extractRepository.UploadFileDbLog(file);
+        }
+
+        [HttpGet("GetAllMovements")]
+        public async Task<List<Extract>> GetAllMovements()
+        {
+            var result = await _extractRepository.GetAllMovements();
+            return result;
         }
     }
 }

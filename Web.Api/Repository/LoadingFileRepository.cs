@@ -20,7 +20,7 @@ namespace Web.Api.Repository
             if (file.Length > 0)
             {
                 var extract = new Extract();
-                extract.Pagamentos = new List<Movement>();
+                extract.pagamentos = new List<Movement>();
                 extract.recebimentos = new List<Movement>();
                 using (var reader = new StreamReader(file.OpenReadStream()))
                 {
@@ -30,16 +30,18 @@ namespace Web.Api.Repository
 
                         var movement = new Movement()
                         {
-                            Data = item[0],
-                            Descricao = item[1],
-                            Moeda = "R$",
-                            Valor = Convert.ToDecimal(item[2]),
+                            data = item[0],
+                            descricao = item[1],
+                            moeda = "R$",
+                            valor = item[2],
                             categoria = item.Length > 2 ? item[3] : null
                         };
 
-                        if (movement.Valor <= 0)
+                        var valor = Convert.ToDecimal(movement.valor);
+
+                        if (valor <= 0)
                         {
-                            extract.Pagamentos.Add(movement);
+                            extract.pagamentos.Add(movement);
                         }
                         else
                         {

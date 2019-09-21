@@ -26,7 +26,7 @@ namespace Web.Api.api
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddTransient<IExtractRepository, ExtractRepository>();
+            services.AddHttpClient<IExtractRepository, ExtractRepository>();
             services.AddTransient<ILoadingFileRepository, LoadingFileRepository>();
             
             services.AddSwaggerGen(c =>
