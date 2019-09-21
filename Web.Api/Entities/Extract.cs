@@ -4,7 +4,7 @@ namespace Web.Api.Entities
 {
     public class Extract 
     {
-        public List<Movement> pagamentos { get; set; }
-        public List<Movement> recebimentos { get; set; }
+        public List<MovementResult> pagamentos { get; set; }
+        public List<MovementResult> recebimentos { get; set; }        
     }
 }

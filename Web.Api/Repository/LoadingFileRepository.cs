@@ -20,15 +20,15 @@ namespace Web.Api.Repository
             if (file.Length > 0)
             {
                 var extract = new Extract();
-                extract.pagamentos = new List<Movement>();
-                extract.recebimentos = new List<Movement>();
+                extract.pagamentos = new List<MovementResult>();
+                extract.recebimentos = new List<MovementResult>();
                 using (var reader = new StreamReader(file.OpenReadStream()))
                 {
                     while (reader.Peek() >= 0)
                     {
                         var item = reader.ReadLine().Split(";");
 
-                        var movement = new Movement()
+                        var movement = new MovementResult()
                         {
                             data = item[0],
                             descricao = item[1],

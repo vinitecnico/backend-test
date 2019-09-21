@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Web.Api.Entities;
 using System.Linq;
+using Web.Api.Help;
+using System;
 
 namespace Web.Api.Repository
 {
@@ -37,7 +39,7 @@ namespace Web.Api.Repository
             return true;
         }
 
-        public List<Task> Insert(List<Movement> movments, string type)
+        public List<Task> Insert(List<MovementResult> movments, string type)
         {
             var tasks = new List<Task>();
             foreach (var item in movments)
@@ -51,18 +53,27 @@ namespace Web.Api.Repository
             return tasks;
         }
 
-        // exibir o log de movimentações de forma ordenada
-        public async Task<List<Extract>> GetAllMovements()
+        public async Task<Extract> GetExtractAll()
         {
-            var list = new List<Extract>();
+            var extract = new Extract();
             string baseURL = _configuration.GetSection("BackendTest:BaseURL").Value;
             var result = await _client.GetAsync($"{baseURL}/db");
 
             if (result.IsSuccessStatusCode)
             {
-                var response = await result.Content.ReadAsAsync<Extract>();
+                extract = await result.Content.ReadAsAsync<Extract>();
             }
 
+            return extract;
+        }
+
+        // exibir o log de movimentações de forma ordenada
+        public async Task<List<Movement>> GetAllMovements()
+        {
+            var resul = await GetExtractAll();
+            var extractList = resul.pagamentos.Union(resul.recebimentos);
+            var util = new UtilHelp();
+            var list = util.ConvertMovementResultToMovement(extractList.ToList());
             return list;
         }
 
@@ -90,7 +101,5 @@ namespace Web.Api.Repository
         {
             throw new System.NotImplementedException();
         }
-
-
     }
 }

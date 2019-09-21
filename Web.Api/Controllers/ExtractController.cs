@@ -27,7 +27,7 @@ namespace Web.Api.Controllers
         }
 
         [HttpGet("GetAllMovements")]
-        public async Task<List<Extract>> GetAllMovements()
+        public async Task<List<Movement>> GetAllMovements()
         {
             var result = await _extractRepository.GetAllMovements();
             return result;
