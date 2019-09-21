@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <RootNamespace>backend_test.api</RootNamespace>
+    <RootNamespace>Web.Api.api</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

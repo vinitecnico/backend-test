@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "backend-test.api", "backend-test.api\backend-test.api.csproj", "{D6256086-2482-4C40-8BCA-EB1557EB7AFC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Api", "Web.Api\Web.Api.csproj", "{D6256086-2482-4C40-8BCA-EB1557EB7AFC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "backend-test.test", "backend-test.test\backend-test.test.csproj", "{EA3AC332-3EBF-48B4-9180-272FAFFFBCF5}"
 EndProject

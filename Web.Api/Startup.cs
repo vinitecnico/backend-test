@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using backend_test.Controllers;
-using backend_test.Repository;
+using Web.Api.Controllers;
+using Web.Api.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -12,7 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace backend_test.api
+namespace Web.Api.api
 {
     public class Startup
     {
@@ -26,7 +26,8 @@ namespace backend_test.api
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddTransient<IRepository, MovementRepository>();
+            services.AddTransient<IExtractRepository, ExtractRepository>();
+            services.AddTransient<ILoadingFileRepository, LoadingFileRepository>();
             
             services.AddSwaggerGen(c =>
             {

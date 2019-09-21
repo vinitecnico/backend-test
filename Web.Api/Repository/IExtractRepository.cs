@@ -1,12 +1,13 @@
 using System.Collections.Generic;
-using backend_test.Entities;
+using Microsoft.AspNetCore.Http;
+using Web.Api.Entities;
 
-namespace backend_test.Repository
+namespace Web.Api.Repository
 {
-    public interface IRepository
+    public interface IExtractRepository
     {
-        bool UploadFile();
-        IEnumerable<Movement> GetAllMovements();
+        bool UploadFileDbLog(IFormFile file);
+        IEnumerable<Extract> GetAllMovements();
         Dictionary<string, decimal> TotalByCategory();
         Dictionary<string, decimal> CustomerCategorySpentMore();
         Dictionary<string, decimal> MonthCustomerCategorySpentMore();

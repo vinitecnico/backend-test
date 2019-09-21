@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace backend_test.Entities
+namespace Web.Api.Entities
 {
     public class Movement 
     {

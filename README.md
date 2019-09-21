@@ -2,7 +2,7 @@
 
 - dotnet build
 
-- dotnet run --project ./backend-test.api/backend-test.api.csproj
+- dotnet run --project ./Web.Api/Web.Api.csproj
 
 https://localhost:5001/swagger/index.html
 
