@@ -53,3 +53,8 @@ GET: https://localhost:5001/api/Extract/TotalMovementCustomer
 dotnet test
 
 dotnet test Web.Api.UnitTest/Web.Api.UnitTest.csproj /p:CollectCoverage=true
+
+# Próximas features
+- Autenticação da api jwt token ou auth
+- Abstração do projeto em mais camadas clean architecture
+- Alterar base de dados para mongoDB sem alterar muito a estrutura do projeto
