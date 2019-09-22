@@ -9,6 +9,8 @@ dotnet run --project ./Web.Api/Web.Api.csproj
 # Swagger para documentar as rotas do projeto
 
   https://localhost:5001/swagger/index.html
+  
+# Descrição do que cada uma é responsável por retornar
 
 - Fazer o input dos dados acima, usando um arquivo no formato de log;
 - Chamar os recursos de API e combinar os dados para processamento.
@@ -46,7 +48,8 @@ GET: https://localhost:5001/api/Extract/MoneyCustomerReceived
 
 GET: https://localhost:5001/api/Extract/TotalMovementCustomer
 
-# dotnet run test project
+# Como executar o projeto de teste
+
 dotnet test
 
 dotnet test Web.Api.UnitTest/Web.Api.UnitTest.csproj /p:CollectCoverage=true
