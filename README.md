@@ -41,3 +41,5 @@ GET: https://localhost:5001/api/Extract/TotalMovementCustomer
 
 # dotnet run test project
 dotnet test
+
+dotnet test Web.Api.UnitTest/Web.Api.UnitTest.csproj /p:CollectCoverage=true

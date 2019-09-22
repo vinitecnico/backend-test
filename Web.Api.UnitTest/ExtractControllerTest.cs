@@ -15,12 +15,8 @@ using Assert = NUnit.Framework.Assert;
 
 namespace Web.Api.UnitTest
 {
-    public class ExtractTest
+    public class ExtractControllerTest
     {
-        public ExtractTest()
-        {
-        }
-
         private List<Movement> GetTestSessionsByListMoment()
         {
             var sessions = new List<Movement>();
