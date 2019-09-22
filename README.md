@@ -9,7 +9,10 @@
 - Fazer o input dos dados acima, usando um arquivo no formato de log;
 - Chamar os recursos de API e combinar os dados para processamento.
 
-POST: https://localhost:5001/api/GetAllMovements
+POST: https://localhost:5001/api/Extract/UploadFileDbLog 
+
+obs: aquivo de exemplo para upload na solution db.log
+selecione no postman na aba body format-data e passando o campo file.
 
 - Exibir o log de movimentações de forma ordenada
 
