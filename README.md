@@ -1,8 +1,12 @@
 # backend-test run
 
-- dotnet build
+- Para rodar o projeto rode os seguintes comandos:
 
-- dotnet run --project ./Web.Api/Web.Api.csproj
+dotnet build
+
+dotnet run --project ./Web.Api/Web.Api.csproj
+
+# Swagger para documentar as rotas do projeto
 
   https://localhost:5001/swagger/index.html
 
