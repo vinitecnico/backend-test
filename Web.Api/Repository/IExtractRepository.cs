@@ -9,8 +9,8 @@ namespace Web.Api.Repository
     {
         Task<bool> UploadFileDbLog(IFormFile file);
         List<Task> Insert(List<MovementResult> movments, string type);
-        Task<Extract> GetExtractAll();
-        Task<List<Movement>> GetMovementAll(string type);
+        Task<Extract> GetExtractAll(string baseURL);
+        Task<List<Movement>> GetMovementAll(string type, string baseURL);
         Task<List<Movement>> GetAllMovements();
         Task<Dictionary<string, double>> TotalByCategory();
         Task<KeyValuePair<string, double>> CustomerCategorySpentMore();

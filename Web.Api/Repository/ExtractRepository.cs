@@ -16,14 +16,12 @@ namespace Web.Api.Repository
     public class ExtractRepository : IExtractRepository
     {
         private HttpClient _client;
-        private IConfiguration _configuration;
-        private readonly ILoadingFileRepository _loadingFileRepository;
-        public ExtractRepository(IConfiguration configuration, HttpClient client, ILoadingFileRepository loadingFileRepository)
+        private IConfiguration _configuration;        
+        public ExtractRepository(IConfiguration configuration, HttpClient client)
         {
             _client = client;
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            _configuration = configuration;
-            _loadingFileRepository = loadingFileRepository;
+            _configuration = configuration;            
         }
 
         // fazer o input dos dados acima, usando um arquivo no formato de log;
@@ -31,7 +29,8 @@ namespace Web.Api.Repository
         public async Task<bool> UploadFileDbLog(IFormFile file)
         {
             string baseURL = _configuration.GetSection("BackendTest:BaseURL").Value;
-            var extract = _loadingFileRepository.Handle(file);
+            LoadingFileRepository loadingfile = new LoadingFileRepository();
+            var extract = loadingfile.Handle(file);
             var resultPagamento = Insert(extract.pagamentos, "pagamentos");
             var resultRecebimento = Insert(extract.pagamentos, "recebimentos");
             var unionList = resultPagamento.Union(resultRecebimento);
@@ -53,10 +52,9 @@ namespace Web.Api.Repository
             return tasks;
         }
 
-        public async Task<Extract> GetExtractAll()
+        public async Task<Extract> GetExtractAll(string baseURL)
         {
             var extract = new Extract();
-            string baseURL = _configuration.GetSection("BackendTest:BaseURL").Value;
             var result = await _client.GetAsync($"{baseURL}/db");
 
             if (result.IsSuccessStatusCode)
@@ -70,16 +68,15 @@ namespace Web.Api.Repository
         // exibir o log de movimentações de forma ordenada
         public async Task<List<Movement>> GetAllMovements()
         {
-            var resul = await GetExtractAll();
+            var resul = await GetExtractAll(_configuration.GetSection("BackendTest:BaseURL").Value);
             var extractList = resul.pagamentos.Union(resul.recebimentos);
             var util = new UtilHelp();
             var list = util.ConvertMovementResultToMovement(extractList.ToList());
             return list;
         }
 
-        public async Task<List<Movement>> GetMovementAll(string type)
+        public async Task<List<Movement>> GetMovementAll(string type, string baseURL)
         {
-            string baseURL = _configuration.GetSection("BackendTest:BaseURL").Value;
             var result = await _client.GetAsync($"{baseURL}/{type}");
             var list = new List<Movement>();
 
@@ -96,7 +93,7 @@ namespace Web.Api.Repository
         // informar o total de gastos por categoria;
         public async Task<Dictionary<string, double>> TotalByCategory()
         {
-            var list = await GetMovementAll("pagamentos");
+            var list = await GetMovementAll("pagamentos", _configuration.GetSection("BackendTest:BaseURL").Value);
 
             var items = list.GroupBy(x => x.categoria)
             .Select(x => new
@@ -112,7 +109,7 @@ namespace Web.Api.Repository
         // informar qual categoria cliente gastou mais;
         public async Task<KeyValuePair<string, double>> CustomerCategorySpentMore()
         {
-            var list = await GetMovementAll("pagamentos");
+            var list = await GetMovementAll("pagamentos", _configuration.GetSection("BackendTest:BaseURL").Value);
             var items = list.GroupBy(x => x.categoria)
             .Select(x => new
             {
@@ -129,7 +126,7 @@ namespace Web.Api.Repository
         // informar qual foi o mês que cliente mais gastou;
         public async Task<KeyValuePair<string, double>> MonthCustomerCategorySpentMore()
         {
-            var list = await GetMovementAll("pagamentos");
+            var list = await GetMovementAll("pagamentos", _configuration.GetSection("BackendTest:BaseURL").Value);
             var items = list
             .Select(x => new
             {
@@ -152,7 +149,7 @@ namespace Web.Api.Repository
         // quanto de dinheiro o cliente gastou;
         public async Task<double> MoneyCustomerSpent()
         {
-            var list = await GetMovementAll("pagamentos");
+            var list = await GetMovementAll("pagamentos", _configuration.GetSection("BackendTest:BaseURL").Value);
             var result = list.Sum(x => Math.Round(x.valor, 2, MidpointRounding.AwayFromZero));
             return result;
         }
@@ -160,7 +157,7 @@ namespace Web.Api.Repository
         // quanto de dinheiro o cliente recebeu;
         public async Task<double> MoneyCustomerReceived()
         {
-            var list = await GetMovementAll("recebimentos");
+            var list = await GetMovementAll("recebimentos", _configuration.GetSection("BackendTest:BaseURL").Value);
             var result = list.Sum(x => Math.Round(x.valor, 2, MidpointRounding.AwayFromZero));
             return result;
         }
@@ -168,10 +165,10 @@ namespace Web.Api.Repository
         // saldo total de movimentações do cliente.
         public async Task<double> TotalMovementCustomer()
         {
-            var listRecebimentos = await GetMovementAll("recebimentos");
+            var listRecebimentos = await GetMovementAll("recebimentos", _configuration.GetSection("BackendTest:BaseURL").Value);
             var totalRecebimentos = listRecebimentos.Sum(x => Math.Round(x.valor, 2, MidpointRounding.AwayFromZero));
 
-            var listPagamentos = await GetMovementAll("pagamentos");
+            var listPagamentos = await GetMovementAll("pagamentos", _configuration.GetSection("BackendTest:BaseURL").Value);
             var totalPagamentos = listPagamentos.Sum(x => Math.Round(x.valor, 2, MidpointRounding.AwayFromZero));
             var result = totalPagamentos + totalRecebimentos;
             return result;

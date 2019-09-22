@@ -12,10 +12,11 @@ using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Assert = NUnit.Framework.Assert;
+using Microsoft.Extensions.Configuration;
 
 namespace Web.Api.UnitTest
 {
-    public class ExtractControllerTest
+    public class ExtractRepositoryTest
     {
         private List<Movement> GetTestSessionsByListMoment()
         {
@@ -48,7 +49,7 @@ namespace Web.Api.UnitTest
         }
 
         [Fact]
-        public async Task UploadFileDbLog()
+        public async Task UploadFileDbLogExtractRepository()
         {
             var fileMock = new Mock<IFormFile>();
             //Setup mock file using a memory stream
@@ -64,130 +65,97 @@ namespace Web.Api.UnitTest
             fileMock.Setup(_ => _.Length).Returns(ms.Length);
             var file = fileMock.Object;
 
+            var configuration = new Mock<IConfiguration>();
+            var configurationSection = new Mock<IConfigurationSection>();
+            configurationSection.Setup(a => a.Value)
+            .Returns("https://my-json-server.typicode.com/cairano/backend-test");
+
+            configuration.Setup(a => a.GetSection("BackendTest:BaseURL"))
+            .Returns(configurationSection.Object);
+
             // arrange
             var mockRepo = new Mock<IExtractRepository>();
             mockRepo.Setup(repo => repo.UploadFileDbLog(file))
                 .ReturnsAsync(true);
-            var controller = new ExtractController(mockRepo.Object);
-            
+            var extractRepository = new ExtractRepository(configuration.Object, new System.Net.Http.HttpClient());
             // Act
-            var result = await controller.UploadFileDbLog(file);
+            var result = await extractRepository.UploadFileDbLog(file);
 
             Assert.True(result);
         }
 
         [Fact]
-        public async Task GetAllMovementsTest()
+        public async Task GetAllMovementsTestExtractRepository()
         {
+            var configuration = new Mock<IConfiguration>();
+            var configurationSection = new Mock<IConfigurationSection>();
+            configurationSection.Setup(a => a.Value)
+            .Returns("https://my-json-server.typicode.com/cairano/backend-test");
+
+            configuration.Setup(a => a.GetSection("BackendTest:BaseURL"))
+            .Returns(configurationSection.Object);
+
             // arrange
             var mockRepo = new Mock<IExtractRepository>();
             mockRepo.Setup(repo => repo.GetAllMovements())
                 .ReturnsAsync(GetTestSessionsByListMoment());
-
-            var controller = new ExtractController(mockRepo.Object);
+            var extractRepository = new ExtractRepository(configuration.Object, new System.Net.Http.HttpClient());
 
             // Act
-            var result = await controller.GetAllMovements();
+            var result = await extractRepository.GetAllMovements();
 
             Assert.True(result.Count > 0);
         }
 
         [Fact]
-        public async Task TotalByCategory()
+        public async Task TotalByCategoryExtractRepository()
         {
+            var configuration = new Mock<IConfiguration>();
+            var configurationSection = new Mock<IConfigurationSection>();
+            configurationSection.Setup(a => a.Value)
+            .Returns("https://my-json-server.typicode.com/cairano/backend-test");
+
+            configuration.Setup(a => a.GetSection("BackendTest:BaseURL"))
+            .Returns(configurationSection.Object);
+
             // arrange
             var mockRepo = new Mock<IExtractRepository>();
             mockRepo.Setup(repo => repo.TotalByCategory())
                 .ReturnsAsync(GetTestSessionsByDictionary());
-            
-            var controller = new ExtractController(mockRepo.Object);
+
+            var extractRepository = new ExtractRepository(configuration.Object, new System.Net.Http.HttpClient());
 
             // Act
-            var result = await controller.TotalByCategory();
+            var result = await extractRepository.TotalByCategory();
 
             Assert.True(result.Count > 0);
         }
 
         [Fact]
-        public async Task CustomerCategorySpentMore()
+        public async Task CustomerCategorySpentMoreExtractRepository()
         {
             var item = new KeyValuePair<string, double>("transporte", -250);
+
+            var configuration = new Mock<IConfiguration>();
+            var configurationSection = new Mock<IConfigurationSection>();
+            configurationSection.Setup(a => a.Value)
+            .Returns("https://my-json-server.typicode.com/cairano/backend-test");
+
             // arrange
             var mockRepo = new Mock<IExtractRepository>();
             mockRepo.Setup(repo => repo.CustomerCategorySpentMore())
                 .ReturnsAsync(item);
 
-            var controller = new ExtractController(mockRepo.Object);
+            mockRepo
+            .Setup(repo => repo.GetMovementAll("pagamentos", "https://my-json-server.typicode.com/cairano/backend-test"))            
+            .ReturnsAsync(GetTestSessionsByListMoment());
+
+            var extractRepository = new ExtractRepository(configuration.Object, new System.Net.Http.HttpClient());            
 
             // Act
-            var result = await controller.CustomerCategorySpentMore();
+            var result = await extractRepository.GetMovementAll("pagamentos", "https://my-json-server.typicode.com/cairano/backend-test");
 
-            Assert.True(!string.IsNullOrEmpty(result.Key));
-        }
-
-        [Fact]
-        public async Task MonthCustomerCategorySpentMore()
-        {
-            var item = new KeyValuePair<string, double>("Jan", -500);
-            // arrange
-            var mockRepo = new Mock<IExtractRepository>();
-            mockRepo.Setup(repo => repo.MonthCustomerCategorySpentMore())
-                .ReturnsAsync(item);
-            
-            var controller = new ExtractController(mockRepo.Object);
-
-            // Act
-            var result = await controller.MonthCustomerCategorySpentMore();
-
-            Assert.True(!string.IsNullOrEmpty(result.Key));
-        }
-
-        [Fact]
-        public async Task MoneyCustomerSpent()
-        {
-            // arrange
-            var mockRepo = new Mock<IExtractRepository>();
-            mockRepo.Setup(repo => repo.MoneyCustomerSpent())
-                .ReturnsAsync(-500);
-            
-            var controller = new ExtractController(mockRepo.Object);
-
-            // Act
-            var result = await controller.MoneyCustomerSpent();
-
-            Assert.True(result < 0);
-        }
-
-        [Fact]
-        public async Task MoneyCustomerReceived()
-        {
-            // arrange
-            var mockRepo = new Mock<IExtractRepository>();
-            mockRepo.Setup(repo => repo.MoneyCustomerReceived())
-                .ReturnsAsync(1000);
-            
-            var controller = new ExtractController(mockRepo.Object);
-
-            // Act
-            var result = await controller.MoneyCustomerReceived();
-
-            Assert.True(result > 0);
-        }
-
-        [Fact]
-        public async Task TotalMovementCustomer()
-        {
-            // arrange
-            var mockRepo = new Mock<IExtractRepository>();
-            mockRepo.Setup(repo => repo.TotalMovementCustomer())
-                .ReturnsAsync(-200);
-            
-            var controller = new ExtractController(mockRepo.Object);
-
-            // Act
-            var result = await controller.TotalMovementCustomer();
-
-            Assert.True(result < 0);
+            Assert.True(result.Count > 0);
         }
     }
 }

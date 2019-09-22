@@ -4,359 +4,325 @@
       "Web.Api.Repository.ExtractRepository": {
         "System.Collections.Generic.List`1<System.Threading.Tasks.Task> Web.Api.Repository.ExtractRepository::Insert(System.Collections.Generic.List`1<Web.Api.Entities.MovementResult>,System.String)": {
           "Lines": {
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "53": 0,
-            "54": 0
+            "42": 2,
+            "43": 2,
+            "44": 10,
+            "45": 2,
+            "46": 2,
+            "47": 2,
+            "48": 2,
+            "49": 2,
+            "50": 2,
+            "52": 2,
+            "53": 2
           },
           "Branches": [
             {
-              "Line": 45,
+              "Line": 44,
               "Offset": 115,
               "EndOffset": 17,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 2
             },
             {
-              "Line": 45,
+              "Line": 44,
               "Offset": 115,
               "EndOffset": 117,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 2
             }
           ]
         },
-        "System.Void Web.Api.Repository.ExtractRepository::.ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.HttpClient,Web.Api.Repository.ILoadingFileRepository)": {
+        "System.Void Web.Api.Repository.ExtractRepository::.ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.HttpClient)": {
           "Lines": {
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0
+            "20": 4,
+            "21": 4,
+            "22": 4,
+            "23": 4,
+            "24": 4,
+            "25": 4
           },
           "Branches": []
         }
       },
-      "Web.Api.Repository.ExtractRepository/<UploadFileDbLog>d__4": {
-        "System.Void Web.Api.Repository.ExtractRepository/<UploadFileDbLog>d__4::MoveNext()": {
+      "Web.Api.Repository.ExtractRepository/<UploadFileDbLog>d__3": {
+        "System.Void Web.Api.Repository.ExtractRepository/<UploadFileDbLog>d__3::MoveNext()": {
           "Lines": {
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "39": 1
           },
           "Branches": [
             {
-              "Line": 38,
-              "Offset": 191,
-              "EndOffset": 193,
+              "Line": 37,
+              "Offset": 197,
+              "EndOffset": 199,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
-              "Line": 38,
-              "Offset": 191,
-              "EndOffset": 257,
+              "Line": 37,
+              "Offset": 197,
+              "EndOffset": 263,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
       },
-      "Web.Api.Repository.ExtractRepository/<GetExtractAll>d__6": {
-        "System.Void Web.Api.Repository.ExtractRepository/<GetExtractAll>d__6::MoveNext()": {
+      "Web.Api.Repository.ExtractRepository/<GetExtractAll>d__5": {
+        "System.Void Web.Api.Repository.ExtractRepository/<GetExtractAll>d__5::MoveNext()": {
           "Lines": {
-            "57": 0,
-            "58": 0,
-            "59": 0,
-            "60": 0,
-            "62": 0,
-            "63": 0,
-            "64": 0,
-            "65": 0,
-            "67": 0,
-            "68": 0
+            "56": 1,
+            "57": 1,
+            "58": 1,
+            "60": 1,
+            "61": 1,
+            "62": 1,
+            "63": 1,
+            "65": 1,
+            "66": 1
           },
           "Branches": [
             {
-              "Line": 57,
+              "Line": 56,
               "Offset": 14,
-              "EndOffset": 28,
+              "EndOffset": 25,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
+            },
+            {
+              "Line": 58,
+              "Offset": 82,
+              "EndOffset": 84,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 58,
+              "Offset": 82,
+              "EndOffset": 151,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
             },
             {
               "Line": 60,
-              "Offset": 117,
-              "EndOffset": 119,
+              "Offset": 198,
+              "EndOffset": 203,
               "Path": 0,
-              "Ordinal": 2,
-              "Hits": 0
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 62,
+              "Offset": 234,
+              "EndOffset": 302,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 1
             },
             {
               "Line": 60,
-              "Offset": 117,
-              "EndOffset": 186,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 0
-            },
-            {
-              "Line": 62,
-              "Offset": 233,
-              "EndOffset": 238,
-              "Path": 0,
-              "Ordinal": 4,
-              "Hits": 0
-            },
-            {
-              "Line": 64,
-              "Offset": 269,
-              "EndOffset": 271,
-              "Path": 0,
-              "Ordinal": 6,
-              "Hits": 0
-            },
-            {
-              "Line": 57,
-              "Offset": 14,
-              "EndOffset": 308,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            },
-            {
-              "Line": 64,
-              "Offset": 269,
-              "EndOffset": 337,
-              "Path": 1,
-              "Ordinal": 7,
-              "Hits": 0
-            },
-            {
-              "Line": 62,
-              "Offset": 233,
-              "EndOffset": 370,
+              "Offset": 198,
+              "EndOffset": 335,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
       },
-      "Web.Api.Repository.ExtractRepository/<GetAllMovements>d__7": {
-        "System.Void Web.Api.Repository.ExtractRepository/<GetAllMovements>d__7::MoveNext()": {
+      "Web.Api.Repository.ExtractRepository/<GetAllMovements>d__6": {
+        "System.Void Web.Api.Repository.ExtractRepository/<GetAllMovements>d__6::MoveNext()": {
           "Lines": {
-            "72": 0,
-            "73": 0,
-            "74": 0,
-            "75": 0,
-            "76": 0,
-            "77": 0,
-            "78": 0
+            "70": 1,
+            "71": 1,
+            "72": 1,
+            "73": 1,
+            "74": 1,
+            "75": 1,
+            "76": 1
           },
           "Branches": [
             {
-              "Line": 73,
-              "Offset": 39,
-              "EndOffset": 41,
+              "Line": 71,
+              "Offset": 65,
+              "EndOffset": 67,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
-              "Line": 73,
-              "Offset": 39,
-              "EndOffset": 108,
+              "Line": 71,
+              "Offset": 65,
+              "EndOffset": 134,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
       },
-      "Web.Api.Repository.ExtractRepository/<GetMovementAll>d__8": {
-        "System.Void Web.Api.Repository.ExtractRepository/<GetMovementAll>d__8::MoveNext()": {
+      "Web.Api.Repository.ExtractRepository/<GetMovementAll>d__7": {
+        "System.Void Web.Api.Repository.ExtractRepository/<GetMovementAll>d__7::MoveNext()": {
           "Lines": {
-            "81": 0,
-            "82": 0,
-            "83": 0,
-            "84": 0,
-            "86": 0,
-            "87": 0,
-            "88": 0,
-            "89": 0,
-            "90": 0,
-            "91": 0,
-            "93": 0,
-            "94": 0
+            "79": 2,
+            "80": 2,
+            "81": 2,
+            "83": 2,
+            "84": 2,
+            "85": 2,
+            "86": 2,
+            "87": 2,
+            "88": 2,
+            "90": 2,
+            "91": 2
           },
           "Branches": [
             {
-              "Line": 81,
+              "Line": 79,
               "Offset": 14,
-              "EndOffset": 28,
+              "EndOffset": 25,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 2
             },
             {
-              "Line": 83,
-              "Offset": 112,
-              "EndOffset": 114,
+              "Line": 80,
+              "Offset": 77,
+              "EndOffset": 79,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 0
+              "Hits": 2
+            },
+            {
+              "Line": 80,
+              "Offset": 77,
+              "EndOffset": 146,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
             },
             {
               "Line": 83,
-              "Offset": 112,
-              "EndOffset": 181,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 0
-            },
-            {
-              "Line": 86,
-              "Offset": 239,
-              "EndOffset": 244,
+              "Offset": 204,
+              "EndOffset": 209,
               "Path": 0,
               "Ordinal": 4,
-              "Hits": 0
+              "Hits": 2
             },
             {
-              "Line": 88,
-              "Offset": 275,
-              "EndOffset": 277,
-              "Path": 0,
-              "Ordinal": 6,
-              "Hits": 0
-            },
-            {
-              "Line": 81,
-              "Offset": 14,
-              "EndOffset": 317,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            },
-            {
-              "Line": 88,
-              "Offset": 275,
-              "EndOffset": 346,
+              "Line": 85,
+              "Offset": 240,
+              "EndOffset": 311,
               "Path": 1,
               "Ordinal": 7,
-              "Hits": 0
+              "Hits": 2
             },
             {
-              "Line": 86,
-              "Offset": 239,
-              "EndOffset": 432,
+              "Line": 83,
+              "Offset": 204,
+              "EndOffset": 397,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 0
+              "Hits": 2
             }
           ]
         }
       },
       "Web.Api.Repository.ExtractRepository/<>c": {
-        "System.String Web.Api.Repository.ExtractRepository/<>c::<TotalByCategory>b__9_0(Web.Api.Entities.Movement)": {
+        "System.String Web.Api.Repository.ExtractRepository/<>c::<TotalByCategory>b__8_0(Web.Api.Entities.Movement)": {
           "Lines": {
-            "101": 0
+            "98": 20
           },
           "Branches": []
         },
-        "<>f__AnonymousType0`2<System.String,System.Double> Web.Api.Repository.ExtractRepository/<>c::<TotalByCategory>b__9_1(System.Linq.IGrouping`2<System.String,Web.Api.Entities.Movement>)": {
+        "<>f__AnonymousType0`2<System.String,System.Double> Web.Api.Repository.ExtractRepository/<>c::<TotalByCategory>b__8_1(System.Linq.IGrouping`2<System.String,Web.Api.Entities.Movement>)": {
           "Lines": {
-            "102": 0,
-            "103": 0,
-            "104": 0,
-            "105": 0,
-            "106": 0
+            "99": 7,
+            "100": 7,
+            "101": 7,
+            "102": 26,
+            "103": 7
           },
           "Branches": [
             {
-              "Line": 102,
+              "Line": 99,
               "Offset": 11,
               "EndOffset": 13,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
-              "Line": 102,
+              "Line": 99,
               "Offset": 11,
               "EndOffset": 20,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 5
             },
             {
-              "Line": 102,
+              "Line": 99,
               "Offset": 33,
               "EndOffset": 35,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 0
+              "Hits": 1
             },
             {
-              "Line": 102,
+              "Line": 99,
               "Offset": 33,
               "EndOffset": 58,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 0
+              "Hits": 6
             }
           ]
         },
-        "System.Double Web.Api.Repository.ExtractRepository/<>c::<TotalByCategory>b__9_2(<>f__AnonymousType0`2<System.String,System.Double>)": {
+        "System.Double Web.Api.Repository.ExtractRepository/<>c::<TotalByCategory>b__8_2(<>f__AnonymousType0`2<System.String,System.Double>)": {
           "Lines": {
-            "107": 0
+            "104": 7
           },
           "Branches": []
         },
-        "System.String Web.Api.Repository.ExtractRepository/<>c::<TotalByCategory>b__9_3(<>f__AnonymousType0`2<System.String,System.Double>)": {
+        "System.String Web.Api.Repository.ExtractRepository/<>c::<TotalByCategory>b__8_3(<>f__AnonymousType0`2<System.String,System.Double>)": {
           "Lines": {
-            "108": 0
+            "105": 13
           },
           "Branches": []
         },
-        "System.String Web.Api.Repository.ExtractRepository/<>c::<CustomerCategorySpentMore>b__10_0(Web.Api.Entities.Movement)": {
+        "System.String Web.Api.Repository.ExtractRepository/<>c::<CustomerCategorySpentMore>b__9_0(Web.Api.Entities.Movement)": {
           "Lines": {
-            "116": 0
+            "113": 0
           },
           "Branches": []
         },
-        "<>f__AnonymousType0`2<System.String,System.Double> Web.Api.Repository.ExtractRepository/<>c::<CustomerCategorySpentMore>b__10_1(System.Linq.IGrouping`2<System.String,Web.Api.Entities.Movement>)": {
+        "<>f__AnonymousType0`2<System.String,System.Double> Web.Api.Repository.ExtractRepository/<>c::<CustomerCategorySpentMore>b__9_1(System.Linq.IGrouping`2<System.String,Web.Api.Entities.Movement>)": {
           "Lines": {
+            "114": 0,
+            "115": 0,
+            "116": 0,
             "117": 0,
-            "118": 0,
-            "119": 0,
-            "120": 0,
-            "121": 0
+            "118": 0
           },
           "Branches": [
             {
-              "Line": 117,
+              "Line": 114,
               "Offset": 11,
               "EndOffset": 13,
               "Path": 0,
@@ -364,7 +330,7 @@
               "Hits": 0
             },
             {
-              "Line": 117,
+              "Line": 114,
               "Offset": 11,
               "EndOffset": 20,
               "Path": 1,
@@ -372,7 +338,7 @@
               "Hits": 0
             },
             {
-              "Line": 117,
+              "Line": 114,
               "Offset": 33,
               "EndOffset": 35,
               "Path": 0,
@@ -380,7 +346,7 @@
               "Hits": 0
             },
             {
-              "Line": 117,
+              "Line": 114,
               "Offset": 33,
               "EndOffset": 58,
               "Path": 1,
@@ -389,45 +355,45 @@
             }
           ]
         },
-        "System.Double Web.Api.Repository.ExtractRepository/<>c::<CustomerCategorySpentMore>b__10_2(<>f__AnonymousType0`2<System.String,System.Double>)": {
+        "System.Double Web.Api.Repository.ExtractRepository/<>c::<CustomerCategorySpentMore>b__9_2(<>f__AnonymousType0`2<System.String,System.Double>)": {
           "Lines": {
-            "122": 0
+            "119": 0
           },
           "Branches": []
         },
-        "System.String Web.Api.Repository.ExtractRepository/<>c::<CustomerCategorySpentMore>b__10_3(<>f__AnonymousType0`2<System.String,System.Double>)": {
+        "System.String Web.Api.Repository.ExtractRepository/<>c::<CustomerCategorySpentMore>b__9_3(<>f__AnonymousType0`2<System.String,System.Double>)": {
           "Lines": {
-            "123": 0
+            "120": 0
           },
           "Branches": []
         },
-        "<>f__AnonymousType1`2<System.Int32,System.Double> Web.Api.Repository.ExtractRepository/<>c::<MonthCustomerCategorySpentMore>b__11_0(Web.Api.Entities.Movement)": {
+        "<>f__AnonymousType1`2<System.Int32,System.Double> Web.Api.Repository.ExtractRepository/<>c::<MonthCustomerCategorySpentMore>b__10_0(Web.Api.Entities.Movement)": {
           "Lines": {
+            "131": 0,
+            "132": 0,
+            "133": 0,
             "134": 0,
-            "135": 0,
-            "136": 0,
+            "135": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Web.Api.Repository.ExtractRepository/<>c::<MonthCustomerCategorySpentMore>b__10_1(<>f__AnonymousType1`2<System.Int32,System.Double>)": {
+          "Lines": {
+            "136": 0
+          },
+          "Branches": []
+        },
+        "<>f__AnonymousType0`2<System.String,System.Double> Web.Api.Repository.ExtractRepository/<>c::<MonthCustomerCategorySpentMore>b__10_2(System.Linq.IGrouping`2<System.Int32,<>f__AnonymousType1`2<System.Int32,System.Double>>)": {
+          "Lines": {
             "137": 0,
-            "138": 0
-          },
-          "Branches": []
-        },
-        "System.Int32 Web.Api.Repository.ExtractRepository/<>c::<MonthCustomerCategorySpentMore>b__11_1(<>f__AnonymousType1`2<System.Int32,System.Double>)": {
-          "Lines": {
-            "139": 0
-          },
-          "Branches": []
-        },
-        "<>f__AnonymousType0`2<System.String,System.Double> Web.Api.Repository.ExtractRepository/<>c::<MonthCustomerCategorySpentMore>b__11_2(System.Linq.IGrouping`2<System.Int32,<>f__AnonymousType1`2<System.Int32,System.Double>>)": {
-          "Lines": {
+            "138": 0,
+            "139": 0,
             "140": 0,
-            "141": 0,
-            "142": 0,
-            "143": 0,
-            "144": 0
+            "141": 0
           },
           "Branches": [
             {
-              "Line": 140,
+              "Line": 137,
               "Offset": 64,
               "EndOffset": 66,
               "Path": 0,
@@ -435,7 +401,7 @@
               "Hits": 0
             },
             {
-              "Line": 140,
+              "Line": 137,
               "Offset": 64,
               "EndOffset": 89,
               "Path": 1,
@@ -444,144 +410,253 @@
             }
           ]
         },
-        "System.Double Web.Api.Repository.ExtractRepository/<>c::<MonthCustomerCategorySpentMore>b__11_3(<>f__AnonymousType0`2<System.String,System.Double>)": {
+        "System.Double Web.Api.Repository.ExtractRepository/<>c::<MonthCustomerCategorySpentMore>b__10_3(<>f__AnonymousType0`2<System.String,System.Double>)": {
           "Lines": {
-            "145": 0
+            "142": 0
           },
           "Branches": []
         },
-        "System.String Web.Api.Repository.ExtractRepository/<>c::<MonthCustomerCategorySpentMore>b__11_4(<>f__AnonymousType0`2<System.String,System.Double>)": {
+        "System.String Web.Api.Repository.ExtractRepository/<>c::<MonthCustomerCategorySpentMore>b__10_4(<>f__AnonymousType0`2<System.String,System.Double>)": {
           "Lines": {
-            "146": 0
+            "143": 0
           },
           "Branches": []
         },
-        "System.Double Web.Api.Repository.ExtractRepository/<>c::<MoneyCustomerSpent>b__12_0(Web.Api.Entities.Movement)": {
+        "System.Double Web.Api.Repository.ExtractRepository/<>c::<MoneyCustomerSpent>b__11_0(Web.Api.Entities.Movement)": {
           "Lines": {
-            "156": 0
+            "153": 0
           },
           "Branches": []
         },
-        "System.Double Web.Api.Repository.ExtractRepository/<>c::<MoneyCustomerReceived>b__13_0(Web.Api.Entities.Movement)": {
+        "System.Double Web.Api.Repository.ExtractRepository/<>c::<MoneyCustomerReceived>b__12_0(Web.Api.Entities.Movement)": {
           "Lines": {
-            "164": 0
+            "161": 0
           },
           "Branches": []
         },
-        "System.Double Web.Api.Repository.ExtractRepository/<>c::<TotalMovementCustomer>b__14_0(Web.Api.Entities.Movement)": {
+        "System.Double Web.Api.Repository.ExtractRepository/<>c::<TotalMovementCustomer>b__13_0(Web.Api.Entities.Movement)": {
+          "Lines": {
+            "169": 0
+          },
+          "Branches": []
+        },
+        "System.Double Web.Api.Repository.ExtractRepository/<>c::<TotalMovementCustomer>b__13_1(Web.Api.Entities.Movement)": {
           "Lines": {
             "172": 0
           },
           "Branches": []
-        },
-        "System.Double Web.Api.Repository.ExtractRepository/<>c::<TotalMovementCustomer>b__14_1(Web.Api.Entities.Movement)": {
-          "Lines": {
-            "175": 0
-          },
-          "Branches": []
         }
       },
-      "Web.Api.Repository.ExtractRepository/<TotalByCategory>d__9": {
-        "System.Void Web.Api.Repository.ExtractRepository/<TotalByCategory>d__9::MoveNext()": {
+      "Web.Api.Repository.ExtractRepository/<TotalByCategory>d__8": {
+        "System.Void Web.Api.Repository.ExtractRepository/<TotalByCategory>d__8::MoveNext()": {
           "Lines": {
-            "98": 0,
-            "99": 0,
-            "109": 0,
-            "110": 0
+            "95": 1,
+            "96": 1,
+            "106": 1,
+            "107": 1
           },
           "Branches": [
             {
-              "Line": 99,
-              "Offset": 44,
-              "EndOffset": 46,
+              "Line": 96,
+              "Offset": 70,
+              "EndOffset": 72,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 96,
+              "Offset": 70,
+              "EndOffset": 139,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 98,
+              "Offset": 184,
+              "EndOffset": 186,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 98,
+              "Offset": 184,
+              "EndOffset": 209,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 98,
+              "Offset": 220,
+              "EndOffset": 222,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 98,
+              "Offset": 220,
+              "EndOffset": 245,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            },
+            {
+              "Line": 98,
+              "Offset": 256,
+              "EndOffset": 258,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 1
+            },
+            {
+              "Line": 98,
+              "Offset": 256,
+              "EndOffset": 281,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 1
+            },
+            {
+              "Line": 98,
+              "Offset": 292,
+              "EndOffset": 294,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 1
+            },
+            {
+              "Line": 98,
+              "Offset": 292,
+              "EndOffset": 317,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 1
+            },
+            {
+              "Line": 98,
+              "Offset": 323,
+              "EndOffset": 325,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 1
+            },
+            {
+              "Line": 98,
+              "Offset": 323,
+              "EndOffset": 348,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "Web.Api.Repository.ExtractRepository/<CustomerCategorySpentMore>d__9": {
+        "System.Void Web.Api.Repository.ExtractRepository/<CustomerCategorySpentMore>d__9::MoveNext()": {
+          "Lines": {
+            "111": 0,
+            "112": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0
+          },
+          "Branches": [
+            {
+              "Line": 112,
+              "Offset": 70,
+              "EndOffset": 72,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 0
             },
             {
-              "Line": 99,
-              "Offset": 44,
-              "EndOffset": 113,
+              "Line": 112,
+              "Offset": 70,
+              "EndOffset": 139,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
             },
             {
-              "Line": 101,
-              "Offset": 158,
-              "EndOffset": 160,
+              "Line": 113,
+              "Offset": 184,
+              "EndOffset": 186,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
             },
             {
-              "Line": 101,
-              "Offset": 158,
-              "EndOffset": 183,
+              "Line": 113,
+              "Offset": 184,
+              "EndOffset": 209,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 0
             },
             {
-              "Line": 101,
-              "Offset": 194,
-              "EndOffset": 196,
+              "Line": 113,
+              "Offset": 220,
+              "EndOffset": 222,
               "Path": 0,
               "Ordinal": 4,
               "Hits": 0
             },
             {
-              "Line": 101,
-              "Offset": 194,
-              "EndOffset": 219,
+              "Line": 113,
+              "Offset": 220,
+              "EndOffset": 245,
               "Path": 1,
               "Ordinal": 5,
               "Hits": 0
             },
             {
-              "Line": 101,
-              "Offset": 230,
-              "EndOffset": 232,
+              "Line": 113,
+              "Offset": 256,
+              "EndOffset": 258,
               "Path": 0,
               "Ordinal": 6,
               "Hits": 0
             },
             {
-              "Line": 101,
-              "Offset": 230,
-              "EndOffset": 255,
+              "Line": 113,
+              "Offset": 256,
+              "EndOffset": 281,
               "Path": 1,
               "Ordinal": 7,
               "Hits": 0
             },
             {
-              "Line": 101,
-              "Offset": 266,
-              "EndOffset": 268,
+              "Line": 113,
+              "Offset": 292,
+              "EndOffset": 294,
               "Path": 0,
               "Ordinal": 8,
               "Hits": 0
             },
             {
-              "Line": 101,
-              "Offset": 266,
-              "EndOffset": 291,
+              "Line": 113,
+              "Offset": 292,
+              "EndOffset": 317,
               "Path": 1,
               "Ordinal": 9,
               "Hits": 0
             },
             {
-              "Line": 101,
-              "Offset": 297,
-              "EndOffset": 299,
+              "Line": 113,
+              "Offset": 323,
+              "EndOffset": 325,
               "Path": 0,
               "Ordinal": 10,
               "Hits": 0
             },
             {
-              "Line": 101,
-              "Offset": 297,
-              "EndOffset": 322,
+              "Line": 113,
+              "Offset": 323,
+              "EndOffset": 348,
               "Path": 1,
               "Ordinal": 11,
               "Hits": 0
@@ -589,234 +664,125 @@
           ]
         }
       },
-      "Web.Api.Repository.ExtractRepository/<CustomerCategorySpentMore>d__10": {
-        "System.Void Web.Api.Repository.ExtractRepository/<CustomerCategorySpentMore>d__10::MoveNext()": {
+      "Web.Api.Repository.ExtractRepository/<MonthCustomerCategorySpentMore>d__10": {
+        "System.Void Web.Api.Repository.ExtractRepository/<MonthCustomerCategorySpentMore>d__10::MoveNext()": {
           "Lines": {
-            "114": 0,
-            "115": 0,
-            "125": 0,
-            "126": 0,
-            "127": 0
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0
           },
           "Branches": [
             {
-              "Line": 115,
-              "Offset": 44,
-              "EndOffset": 46,
+              "Line": 129,
+              "Offset": 70,
+              "EndOffset": 72,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 0
             },
             {
-              "Line": 115,
-              "Offset": 44,
-              "EndOffset": 113,
+              "Line": 129,
+              "Offset": 70,
+              "EndOffset": 139,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
             },
             {
-              "Line": 116,
-              "Offset": 158,
-              "EndOffset": 160,
+              "Line": 130,
+              "Offset": 184,
+              "EndOffset": 186,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
             },
             {
-              "Line": 116,
-              "Offset": 158,
-              "EndOffset": 183,
+              "Line": 130,
+              "Offset": 184,
+              "EndOffset": 209,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 0
             },
             {
-              "Line": 116,
-              "Offset": 194,
-              "EndOffset": 196,
+              "Line": 130,
+              "Offset": 220,
+              "EndOffset": 222,
               "Path": 0,
               "Ordinal": 4,
               "Hits": 0
             },
             {
-              "Line": 116,
-              "Offset": 194,
-              "EndOffset": 219,
+              "Line": 130,
+              "Offset": 220,
+              "EndOffset": 245,
               "Path": 1,
               "Ordinal": 5,
               "Hits": 0
             },
             {
-              "Line": 116,
-              "Offset": 230,
-              "EndOffset": 232,
+              "Line": 130,
+              "Offset": 256,
+              "EndOffset": 258,
               "Path": 0,
               "Ordinal": 6,
               "Hits": 0
             },
             {
-              "Line": 116,
-              "Offset": 230,
-              "EndOffset": 255,
+              "Line": 130,
+              "Offset": 256,
+              "EndOffset": 281,
               "Path": 1,
               "Ordinal": 7,
               "Hits": 0
             },
             {
-              "Line": 116,
-              "Offset": 266,
-              "EndOffset": 268,
+              "Line": 130,
+              "Offset": 292,
+              "EndOffset": 294,
               "Path": 0,
               "Ordinal": 8,
               "Hits": 0
             },
             {
-              "Line": 116,
-              "Offset": 266,
-              "EndOffset": 291,
+              "Line": 130,
+              "Offset": 292,
+              "EndOffset": 317,
               "Path": 1,
               "Ordinal": 9,
               "Hits": 0
             },
             {
-              "Line": 116,
-              "Offset": 297,
-              "EndOffset": 299,
+              "Line": 130,
+              "Offset": 328,
+              "EndOffset": 330,
               "Path": 0,
               "Ordinal": 10,
               "Hits": 0
             },
             {
-              "Line": 116,
-              "Offset": 297,
-              "EndOffset": 322,
-              "Path": 1,
-              "Ordinal": 11,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "Web.Api.Repository.ExtractRepository/<MonthCustomerCategorySpentMore>d__11": {
-        "System.Void Web.Api.Repository.ExtractRepository/<MonthCustomerCategorySpentMore>d__11::MoveNext()": {
-          "Lines": {
-            "131": 0,
-            "132": 0,
-            "133": 0,
-            "148": 0,
-            "149": 0,
-            "150": 0
-          },
-          "Branches": [
-            {
-              "Line": 132,
-              "Offset": 44,
-              "EndOffset": 46,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 132,
-              "Offset": 44,
-              "EndOffset": 113,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            },
-            {
-              "Line": 133,
-              "Offset": 158,
-              "EndOffset": 160,
-              "Path": 0,
-              "Ordinal": 2,
-              "Hits": 0
-            },
-            {
-              "Line": 133,
-              "Offset": 158,
-              "EndOffset": 183,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 0
-            },
-            {
-              "Line": 133,
-              "Offset": 194,
-              "EndOffset": 196,
-              "Path": 0,
-              "Ordinal": 4,
-              "Hits": 0
-            },
-            {
-              "Line": 133,
-              "Offset": 194,
-              "EndOffset": 219,
-              "Path": 1,
-              "Ordinal": 5,
-              "Hits": 0
-            },
-            {
-              "Line": 133,
-              "Offset": 230,
-              "EndOffset": 232,
-              "Path": 0,
-              "Ordinal": 6,
-              "Hits": 0
-            },
-            {
-              "Line": 133,
-              "Offset": 230,
-              "EndOffset": 255,
-              "Path": 1,
-              "Ordinal": 7,
-              "Hits": 0
-            },
-            {
-              "Line": 133,
-              "Offset": 266,
-              "EndOffset": 268,
-              "Path": 0,
-              "Ordinal": 8,
-              "Hits": 0
-            },
-            {
-              "Line": 133,
-              "Offset": 266,
-              "EndOffset": 291,
-              "Path": 1,
-              "Ordinal": 9,
-              "Hits": 0
-            },
-            {
-              "Line": 133,
-              "Offset": 302,
-              "EndOffset": 304,
-              "Path": 0,
-              "Ordinal": 10,
-              "Hits": 0
-            },
-            {
-              "Line": 133,
-              "Offset": 302,
-              "EndOffset": 327,
+              "Line": 130,
+              "Offset": 328,
+              "EndOffset": 353,
               "Path": 1,
               "Ordinal": 11,
               "Hits": 0
             },
             {
-              "Line": 133,
-              "Offset": 333,
-              "EndOffset": 335,
+              "Line": 130,
+              "Offset": 359,
+              "EndOffset": 361,
               "Path": 0,
               "Ordinal": 12,
               "Hits": 0
             },
             {
-              "Line": 133,
-              "Offset": 333,
-              "EndOffset": 358,
+              "Line": 130,
+              "Offset": 359,
+              "EndOffset": 384,
               "Path": 1,
               "Ordinal": 13,
               "Hits": 0
@@ -824,43 +790,43 @@
           ]
         }
       },
-      "Web.Api.Repository.ExtractRepository/<MoneyCustomerSpent>d__12": {
-        "System.Void Web.Api.Repository.ExtractRepository/<MoneyCustomerSpent>d__12::MoveNext()": {
+      "Web.Api.Repository.ExtractRepository/<MoneyCustomerSpent>d__11": {
+        "System.Void Web.Api.Repository.ExtractRepository/<MoneyCustomerSpent>d__11::MoveNext()": {
           "Lines": {
+            "151": 0,
+            "152": 0,
             "154": 0,
-            "155": 0,
-            "157": 0,
-            "158": 0
+            "155": 0
           },
           "Branches": [
             {
-              "Line": 155,
-              "Offset": 44,
-              "EndOffset": 46,
+              "Line": 152,
+              "Offset": 70,
+              "EndOffset": 72,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 0
             },
             {
-              "Line": 155,
-              "Offset": 44,
-              "EndOffset": 113,
+              "Line": 152,
+              "Offset": 70,
+              "EndOffset": 139,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
             },
             {
-              "Line": 156,
-              "Offset": 158,
-              "EndOffset": 160,
+              "Line": 153,
+              "Offset": 184,
+              "EndOffset": 186,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
             },
             {
-              "Line": 156,
-              "Offset": 158,
-              "EndOffset": 183,
+              "Line": 153,
+              "Offset": 184,
+              "EndOffset": 209,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 0
@@ -868,43 +834,43 @@
           ]
         }
       },
-      "Web.Api.Repository.ExtractRepository/<MoneyCustomerReceived>d__13": {
-        "System.Void Web.Api.Repository.ExtractRepository/<MoneyCustomerReceived>d__13::MoveNext()": {
+      "Web.Api.Repository.ExtractRepository/<MoneyCustomerReceived>d__12": {
+        "System.Void Web.Api.Repository.ExtractRepository/<MoneyCustomerReceived>d__12::MoveNext()": {
           "Lines": {
+            "159": 0,
+            "160": 0,
             "162": 0,
-            "163": 0,
-            "165": 0,
-            "166": 0
+            "163": 0
           },
           "Branches": [
             {
-              "Line": 163,
-              "Offset": 44,
-              "EndOffset": 46,
+              "Line": 160,
+              "Offset": 70,
+              "EndOffset": 72,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 0
             },
             {
-              "Line": 163,
-              "Offset": 44,
-              "EndOffset": 113,
+              "Line": 160,
+              "Offset": 70,
+              "EndOffset": 139,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
             },
             {
-              "Line": 164,
-              "Offset": 158,
-              "EndOffset": 160,
+              "Line": 161,
+              "Offset": 184,
+              "EndOffset": 186,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
             },
             {
-              "Line": 164,
-              "Offset": 158,
-              "EndOffset": 183,
+              "Line": 161,
+              "Offset": 184,
+              "EndOffset": 209,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 0
@@ -912,19 +878,19 @@
           ]
         }
       },
-      "Web.Api.Repository.ExtractRepository/<TotalMovementCustomer>d__14": {
-        "System.Void Web.Api.Repository.ExtractRepository/<TotalMovementCustomer>d__14::MoveNext()": {
+      "Web.Api.Repository.ExtractRepository/<TotalMovementCustomer>d__13": {
+        "System.Void Web.Api.Repository.ExtractRepository/<TotalMovementCustomer>d__13::MoveNext()": {
           "Lines": {
-            "170": 0,
+            "167": 0,
+            "168": 0,
             "171": 0,
+            "173": 0,
             "174": 0,
-            "176": 0,
-            "177": 0,
-            "178": 0
+            "175": 0
           },
           "Branches": [
             {
-              "Line": 170,
+              "Line": 167,
               "Offset": 14,
               "EndOffset": 25,
               "Path": 0,
@@ -932,73 +898,73 @@
               "Hits": 0
             },
             {
-              "Line": 171,
-              "Offset": 55,
-              "EndOffset": 57,
+              "Line": 168,
+              "Offset": 81,
+              "EndOffset": 83,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
             },
             {
-              "Line": 171,
-              "Offset": 55,
-              "EndOffset": 124,
+              "Line": 168,
+              "Offset": 81,
+              "EndOffset": 150,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 0
             },
             {
-              "Line": 172,
-              "Offset": 169,
-              "EndOffset": 171,
+              "Line": 169,
+              "Offset": 195,
+              "EndOffset": 197,
               "Path": 0,
               "Ordinal": 4,
               "Hits": 0
             },
             {
-              "Line": 172,
-              "Offset": 169,
-              "EndOffset": 194,
+              "Line": 169,
+              "Offset": 195,
+              "EndOffset": 220,
               "Path": 1,
               "Ordinal": 5,
               "Hits": 0
             },
             {
-              "Line": 174,
-              "Offset": 234,
-              "EndOffset": 236,
+              "Line": 171,
+              "Offset": 286,
+              "EndOffset": 288,
               "Path": 0,
               "Ordinal": 6,
               "Hits": 0
             },
             {
-              "Line": 170,
+              "Line": 167,
               "Offset": 14,
-              "EndOffset": 276,
+              "EndOffset": 328,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
             },
             {
-              "Line": 174,
-              "Offset": 234,
-              "EndOffset": 305,
+              "Line": 171,
+              "Offset": 286,
+              "EndOffset": 357,
               "Path": 1,
               "Ordinal": 7,
               "Hits": 0
             },
             {
-              "Line": 175,
-              "Offset": 350,
-              "EndOffset": 352,
+              "Line": 172,
+              "Offset": 402,
+              "EndOffset": 404,
               "Path": 0,
               "Ordinal": 8,
               "Hits": 0
             },
             {
-              "Line": 175,
-              "Offset": 350,
-              "EndOffset": 375,
+              "Line": 172,
+              "Offset": 402,
+              "EndOffset": 427,
               "Path": 1,
               "Ordinal": 9,
               "Hits": 0
@@ -1011,38 +977,38 @@
       "Web.Api.Repository.LoadingFileRepository": {
         "Web.Api.Entities.Extract Web.Api.Repository.LoadingFileRepository::Handle(Microsoft.AspNetCore.Http.IFormFile)": {
           "Lines": {
-            "19": 0,
-            "20": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "40": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "27": 2,
+            "28": 1,
+            "29": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "40": 1,
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "45": 1,
             "47": 0,
             "48": 0,
             "49": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0,
+            "50": 1,
+            "51": 1,
+            "52": 1,
             "55": 0,
-            "56": 0
+            "56": 1
           },
           "Branches": [
             {
@@ -1051,7 +1017,7 @@
               "EndOffset": 18,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 27,
@@ -1059,7 +1025,7 @@
               "EndOffset": 67,
               "Path": 1,
               "Ordinal": 7,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 31,
@@ -1075,7 +1041,7 @@
               "EndOffset": 143,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 42,
@@ -1083,7 +1049,7 @@
               "EndOffset": 186,
               "Path": 0,
               "Ordinal": 4,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 42,
@@ -1099,7 +1065,7 @@
               "EndOffset": 242,
               "Path": 0,
               "Ordinal": 6,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 20,
@@ -1113,9 +1079,9 @@
         },
         "System.Void Web.Api.Repository.LoadingFileRepository::.ctor()": {
           "Lines": {
-            "13": 0,
-            "14": 0,
-            "16": 0
+            "13": 1,
+            "14": 1,
+            "16": 1
           },
           "Branches": []
         }
@@ -1248,34 +1214,34 @@
       "Web.Api.Help.UtilHelp": {
         "System.DateTime Web.Api.Help.UtilHelp::ConvertStringByDate(System.String)": {
           "Lines": {
-            "23": 0,
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "29": 0,
-            "30": 0
+            "23": 64,
+            "24": 64,
+            "25": 64,
+            "26": 64,
+            "27": 64,
+            "29": 64,
+            "30": 64
           },
           "Branches": []
         },
         "System.Collections.Generic.List`1<Web.Api.Entities.Movement> Web.Api.Help.UtilHelp::ConvertMovementResultToMovement(System.Collections.Generic.List`1<Web.Api.Entities.MovementResult>)": {
           "Lines": {
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "41": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "46": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0
+            "33": 3,
+            "34": 3,
+            "35": 137,
+            "36": 64,
+            "37": 64,
+            "38": 64,
+            "39": 64,
+            "40": 64,
+            "41": 64,
+            "42": 64,
+            "43": 64,
+            "44": 64,
+            "46": 64,
+            "47": 64,
+            "48": 67,
+            "49": 3
           },
           "Branches": [
             {
@@ -1284,7 +1250,7 @@
               "EndOffset": 20,
               "Path": 1,
               "Ordinal": 11,
-              "Hits": 0
+              "Hits": 64
             },
             {
               "Line": 37,
@@ -1300,7 +1266,7 @@
               "EndOffset": 55,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 64
             },
             {
               "Line": 37,
@@ -1316,7 +1282,7 @@
               "EndOffset": 90,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 0
+              "Hits": 64
             },
             {
               "Line": 37,
@@ -1324,7 +1290,7 @@
               "EndOffset": 116,
               "Path": 0,
               "Ordinal": 4,
-              "Hits": 0
+              "Hits": 3
             },
             {
               "Line": 37,
@@ -1332,7 +1298,7 @@
               "EndOffset": 123,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 0
+              "Hits": 61
             },
             {
               "Line": 37,
@@ -1348,7 +1314,7 @@
               "EndOffset": 160,
               "Path": 1,
               "Ordinal": 7,
-              "Hits": 0
+              "Hits": 64
             },
             {
               "Line": 37,
@@ -1356,7 +1322,7 @@
               "EndOffset": 206,
               "Path": 0,
               "Ordinal": 8,
-              "Hits": 0
+              "Hits": 10
             },
             {
               "Line": 37,
@@ -1364,7 +1330,7 @@
               "EndOffset": 209,
               "Path": 1,
               "Ordinal": 9,
-              "Hits": 0
+              "Hits": 54
             },
             {
               "Line": 35,
@@ -1372,7 +1338,7 @@
               "EndOffset": 243,
               "Path": 0,
               "Ordinal": 10,
-              "Hits": 0
+              "Hits": 3
             },
             {
               "Line": 48,
@@ -1380,7 +1346,7 @@
               "EndOffset": 269,
               "Path": 0,
               "Ordinal": 12,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 48,
@@ -1388,15 +1354,15 @@
               "EndOffset": 292,
               "Path": 1,
               "Ordinal": 13,
-              "Hits": 0
+              "Hits": 3
             }
           ]
         },
         "System.Void Web.Api.Help.UtilHelp::.ctor()": {
           "Lines": {
-            "17": 0,
-            "18": 0,
-            "20": 0
+            "17": 3,
+            "18": 3,
+            "20": 3
           },
           "Branches": []
         }
@@ -1406,13 +1372,13 @@
       "Web.Api.Entities.Extract": {
         "System.Collections.Generic.List`1<Web.Api.Entities.MovementResult> Web.Api.Entities.Extract::get_pagamentos()": {
           "Lines": {
-            "7": 0
+            "7": 7
           },
           "Branches": []
         },
         "System.Collections.Generic.List`1<Web.Api.Entities.MovementResult> Web.Api.Entities.Extract::get_recebimentos()": {
           "Lines": {
-            "8": 0
+            "8": 4
           },
           "Branches": []
         }
@@ -1422,31 +1388,31 @@
       "Web.Api.Entities.Movement": {
         "System.DateTime Web.Api.Entities.Movement::get_data()": {
           "Lines": {
-            "7": 2
+            "7": 134
           },
           "Branches": []
         },
         "System.String Web.Api.Entities.Movement::get_descricao()": {
           "Lines": {
-            "8": 2
+            "8": 70
           },
           "Branches": []
         },
         "System.String Web.Api.Entities.Movement::get_moeda()": {
           "Lines": {
-            "9": 2
+            "9": 70
           },
           "Branches": []
         },
         "System.Double Web.Api.Entities.Movement::get_valor()": {
           "Lines": {
-            "10": 2
+            "10": 89
           },
           "Branches": []
         },
         "System.String Web.Api.Entities.Movement::get_categoria()": {
           "Lines": {
-            "11": 2
+            "11": 89
           },
           "Branches": []
         }
@@ -1456,31 +1422,31 @@
       "Web.Api.Entities.MovementResult": {
         "System.String Web.Api.Entities.MovementResult::get_data()": {
           "Lines": {
-            "7": 0
+            "7": 195
           },
           "Branches": []
         },
         "System.String Web.Api.Entities.MovementResult::get_descricao()": {
           "Lines": {
-            "8": 0
+            "8": 195
           },
           "Branches": []
         },
         "System.String Web.Api.Entities.MovementResult::get_moeda()": {
           "Lines": {
-            "9": 0
+            "9": 189
           },
           "Branches": []
         },
         "System.String Web.Api.Entities.MovementResult::get_valor()": {
           "Lines": {
-            "10": 0
+            "10": 196
           },
           "Branches": []
         },
         "System.String Web.Api.Entities.MovementResult::get_categoria()": {
           "Lines": {
-            "11": 0
+            "11": 178
           },
           "Branches": []
         }
